@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Derivadas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Calculadora de la Derivada CV^n</h2>
+        <input type="text" id="formula" class="input-field" placeholder="ej: 7x^2">
+        <div>
+            <div class="btn4">
+                <!-- <div class="button c1" onclick="appendToFormula('a')">a</div>
+                <div class="button c1" onclick="appendToFormula('b')">b</div>
+                <div class="button c1" onclick="appendToFormula('c')">c</div> -->
+                <!-- <div class="button c1" onclick="appendToFormula('x')">x</div> -->
+                <!-- <div class="button c1" onclick="appendToFormula('y')">y</div>
+                <div class="button c1" onclick="appendToFormula('z')">z</div> -->
+                <div class="button c2" onclick="appendToFormula('^')">^</div>
+                <div class="button c2" onclick="appendToFormula('(')">(</div>
+                <div class="button c2" onclick="appendToFormula(')')">)</div>
+                <div class="button c2" onclick="appendToFormula('√')">√</div>
+                <div class="button c2" onclick="appendToFormula('/')">/</div>
+                <div class="button c0" onclick="deleteLastChar()">⌫</div>
+            </div>
+            <div class="buttons">
+                <!-- <div class="button cn" onclick="appendToFormula('7')">7</div>
+                <div class="button cn" onclick="appendToFormula('8')">8</div>
+                <div class="button cn" onclick="appendToFormula('9')">9</div> -->
+                <div class="button c3" onclick="appendToFormula('*')">*</div>
+                <!-- <div class="button cn" onclick="appendToFormula('4')">4</div>
+                <div class="button cn" onclick="appendToFormula('5')">5</div>
+                <div class="button cn" onclick="appendToFormula('6')">6</div> -->
+                <div class="button c3" onclick="appendToFormula('-')">-</div>
+                <!-- <div class="button cn" onclick="appendToFormula('1')">1</div>
+                <div class="button cn" onclick="appendToFormula('2')">2</div>
+                <div class="button cn" onclick="appendToFormula('3')">3</div> -->
+                <div class="button c3" onclick="appendToFormula('+')">+</div>
+                <!-- <div class="button cn" onclick="appendToFormula('0')">0</div> -->
+                <div class="button c3" onclick="appendToFormula('.')">.</div>
+                <div class="button c10" id="clear">AC</div>
+                <div class="button c10" id="calculate">=</div>
+                <div class="button c10" id="close">Cerrar</div> <!-- Botón de cerrar navegador -->
+            </div>
+            <div class="buttons">
+            </div>
+            <div>
+                <h2>Resultados</h2>
+                <label for="functionInput">Función</label>
+                <input class="input-field" type="text" id="functionInput">
+                <label for="derivativeOutput">Derivada</label>
+                <input class="input-field" type="text" id="derivativeOutput">
+                <div id="functionGraph"></div>
+                <div id="derivativeGraph"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
